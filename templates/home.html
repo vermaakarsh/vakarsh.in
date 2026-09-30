@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block main_content %}
+<main class="home">
+  <div class="home-intro">{{ section.content | safe }}</div>
+
+  {% set writing = get_section(path="posts/_index.md") %}
+  <section class="home-writing" aria-labelledby="recent-writing">
+    <div class="home-section-heading">
+      <h1 id="recent-writing">Recent writing</h1>
+      <a href="/posts/">All writing <span aria-hidden="true">↗</span></a>
+    </div>
+    {% if writing.pages | length > 0 %}
+      <div class="post-list">
+        {{<post.list_posts pages={writing.pages} />}}
+      </div>
+    {% else %}
+      <p class="empty-note">The first piece will appear here when it's ready.</p>
+    {% endif %}
+  </section>
+</main>
+{% endblock main_content %}

@@ -1,0 +1,21 @@
+:root { --page-width: 860px; }
+
+body { padding-top: clamp(1.5rem, 3vw, 3rem); }
+nav { margin-bottom: clamp(3rem, 7vw, 5rem); }
+
+.home-intro { max-width: 68ch; font-size: clamp(1.12rem, 1.8vw, 1.3rem); line-height: 1.7; }
+.home-intro p { margin: 0 0 1.2rem; }
+.home-intro p + p { color: var(--text-1); font-size: .92em; }
+.home-writing { margin-top: clamp(4.5rem, 10vw, 7rem); }
+.home-section-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; }
+.home-section-heading h1 { margin: 0 0 1.4rem; }
+.home-section-heading a { font-size: .9rem; white-space: nowrap; }
+.empty-note { color: var(--text-1); margin-top: 1.5rem; }
+.tag-index ul { list-style: none; margin: 2.5rem 0 0; padding: 0; }
+.tag-index li { display: flex; justify-content: space-between; gap: 1rem; padding: .85rem 0; border-bottom: 1px solid var(--border-color); }
+.tag-index li span { color: var(--text-1); }
+
+@media (max-width: 600px) {
+  nav { gap: 1rem; }
+  .home-writing { margin-top: 4rem; }
+}

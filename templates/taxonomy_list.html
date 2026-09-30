@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block main_content %}
+<main class="tag-index">
+  <h1 class="page-header">Tags</h1>
+  <p>Explore published writing by subject.</p>
+  {% if terms | length > 0 %}
+    <ul>
+      {% for term in terms | sort(attribute="name") %}
+        <li><a href="{{ term.permalink }}">{{ term.name }}</a><span>{{ term.page_count }}</span></li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p class="empty-note">Tags will appear as soon as the first piece is published.</p>
+  {% endif %}
+</main>
+{% endblock main_content %}
