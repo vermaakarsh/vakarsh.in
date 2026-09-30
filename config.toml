@@ -1,0 +1,41 @@
+base_url = "https://vakarsh.in"
+title = "Akarsh Verma"
+description = "Notes on building software, learning in public, and asking better questions."
+theme = "apollo"
+compile_sass = true
+minify_html = true
+build_search_index = true
+generate_feeds = true
+taxonomies = [{ name = "tags" }]
+
+[search]
+include_title = true
+include_description = true
+include_content = true
+index_format = "elasticlunr_json"
+
+[markdown.highlighting]
+style = "class"
+light_theme = "github-light"
+dark_theme = "github-dark"
+
+[extra]
+theme = "toggle"
+use_cdn = false
+stylesheets = ["custom.css"]
+menu = [
+  { name = "writing", url = "/posts/", weight = 1 },
+  { name = "about", url = "/about/", weight = 2 },
+  { name = "tags", url = "/tags/", weight = 3 },
+]
+socials = [
+  { name = "GitHub", url = "https://github.com/vermaakarsh", icon = "github" },
+  { name = "YouTube", url = "https://youtube.com/@quantlab", icon = "youtube" },
+  { name = "RSS", url = "https://vakarsh.in/atom.xml", icon = "rss" },
+]
+
+[extra.taxonomies]
+sort_by = "name"
+
+[extra.analytics]
+enabled = false
