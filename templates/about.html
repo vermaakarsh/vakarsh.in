@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block main_content %}
+<main>
+    <article class="about-page">
+        <header class="about-header">
+            <h1>{{ page.title }}</h1>
+            <div class="about-intro">
+                <div class="about-intro-copy">
+                    {% for paragraph in page.extra.intro %}
+                        <p>{{ paragraph }}</p>
+                    {% endfor %}
+                </div>
+                <figure class="about-portrait">
+                    {% if page.extra?.portrait %}
+                        <img src="{{ get_url(path=page.extra.portrait) }}"
+                             alt="{{ page.extra.portrait_alt | default(value='Akarsh Verma') }}"
+                             width="180" height="220" decoding="async">
+                    {% else %}
+                        <div class="portrait-placeholder" role="img" aria-label="Placeholder for a photo of Akarsh Verma">
+                            <span aria-hidden="true">AV</span>
+                        </div>
+                        <figcaption>Photo to come</figcaption>
+                    {% endif %}
+                </figure>
+            </div>
+        </header>
+        <section class="body">
+            {{ page.content | safe }}
+        </section>
+    </article>
+</main>
+{% endblock main_content %}

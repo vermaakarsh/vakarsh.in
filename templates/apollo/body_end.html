@@ -1,0 +1,23 @@
+<script>
+  (() => {
+    const toc = document.querySelector(".right-content .toc");
+    const article = document.querySelector("main article");
+    if (!toc || !article) return;
+
+    const sidebar = toc.parentElement;
+    const details = document.createElement("details");
+    details.className = "mobile-toc";
+    const summary = document.createElement("summary");
+    summary.textContent = "On this page";
+    details.append(summary);
+    article.insertBefore(details, article.querySelector(".body"));
+
+    const narrow = window.matchMedia("(max-width: 1365px)");
+    const placeToc = () => {
+      (narrow.matches ? details : sidebar).append(toc);
+      details.hidden = !narrow.matches;
+    };
+    placeToc();
+    narrow.addEventListener("change", placeToc);
+  })();
+</script>

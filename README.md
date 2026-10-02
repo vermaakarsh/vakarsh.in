@@ -22,6 +22,10 @@ zola serve
 
 For a clean build, run `zola check --skip-external-links && zola build`. The `themes/apollo` checkout and generated `public/` are ignored; GitHub Actions fetches the same pinned theme for every build. Tags are generated from public page and post front matter; the About page's `personal` tag keeps the index navigable before the first post is published.
 
+The home-page introduction and selected work entries live in `content/_index.md`; the fuller biography is in `content/about.md`. Apollo's article table of contents is enabled in `config.toml`. Its native sidebar appears on wide screens, while `templates/apollo/body_end.html` moves the same TOC into a collapsible in-article section on narrower screens.
+
+The short, personal About page uses `templates/about.html`, with its introduction in `[extra].intro` and dated milestones in `[[extra.journey]]` in `content/about.md`. Keep milestones oldest-first in that file; the `journey` component renders them newest-first in the Markdown body (so the text stays in search). It intentionally omits article dates and a table of contents. To replace the portrait placeholder, add `static/images/akarsh.jpg` and uncomment `portrait` and `portrait_alt`. Only user-approved family details and public professional/channel information belong here, not private drafts or employer material.
+
 ## Hosting
 
 GitHub Pages builds on `main` and deploys the `public/` artifact. Set the Pages source to **GitHub Actions** and the custom domain to `vakarsh.in`. At Namecheap, point the apex to GitHub Pages' four A records and `www` to `vermaakarsh.github.io`; leave mail-related DNS records untouched. After DNS and certificate provisioning, enable **Enforce HTTPS** in Pages settings.
