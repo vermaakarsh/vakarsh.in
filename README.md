@@ -22,6 +22,8 @@ zola serve
 
 For a clean build, run `zola check --skip-external-links && zola build`. The `themes/apollo` checkout and generated `public/` are ignored; GitHub Actions fetches the same pinned theme for every build. Tags are generated from public page and post front matter; the About page's `personal` tag keeps the index navigable before the first post is published.
 
+The home-page introduction and selected work entries live in `content/_index.md`; the fuller biography is in `content/about.md`. Apollo's article table of contents is enabled in `config.toml`. Its native sidebar appears on wide screens, while `templates/apollo/body_end.html` moves the same TOC into a collapsible in-article section on narrower screens.
+
 ## Hosting
 
 GitHub Pages builds on `main` and deploys the `public/` artifact. Set the Pages source to **GitHub Actions** and the custom domain to `vakarsh.in`. At Namecheap, point the apex to GitHub Pages' four A records and `www` to `vermaakarsh.github.io`; leave mail-related DNS records untouched. After DNS and certificate provisioning, enable **Enforce HTTPS** in Pages settings.

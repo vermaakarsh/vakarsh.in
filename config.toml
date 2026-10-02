@@ -22,6 +22,7 @@ dark_theme = "github-dark"
 [extra]
 theme = "toggle"
 use_cdn = false
+toc = true
 stylesheets = ["custom.css"]
 menu = [
   { name = "writing", url = "/posts/", weight = 1 },
