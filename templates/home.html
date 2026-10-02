@@ -2,44 +2,19 @@
 
 {% block main_content %}
 <main class="home">
-  <section class="home-about" aria-labelledby="home-about-title">
-    <h1 id="home-about-title">About</h1>
+  <header class="home-about">
+    <h1>Writing</h1>
     <div class="home-intro">{{ section.content | safe }}</div>
-  </section>
-
-  <section class="home-work" aria-labelledby="selected-work">
-    <h2 id="selected-work">Selected work</h2>
-    <ul class="work-list">
-      {% for project in section.extra.projects %}
-        <li class="work-item">
-          <span class="work-kind">{{ project.kind }}</span>
-          <div>
-            <h3>
-              {% if project.url %}
-                <a href="{{ project.url | safe }}">{{ project.name }} <span aria-hidden="true">↗</span></a>
-              {% else %}
-                {{ project.name }}
-              {% endif %}
-            </h3>
-            <p>{{ project.description }}</p>
-          </div>
-        </li>
-      {% endfor %}
-    </ul>
-  </section>
+  </header>
 
   {% set writing = get_section(path="posts/_index.md") %}
-  <section class="home-writing" aria-labelledby="recent-writing">
-    <div class="home-section-heading">
-      <h2 id="recent-writing">Recent writing</h2>
-      <a href="/posts/">All writing <span aria-hidden="true">↗</span></a>
-    </div>
+  <section class="home-writing" aria-label="Recent writing">
     {% if writing.pages | length > 0 %}
       <div class="post-list">
         {{<post.list_posts pages={writing.pages} />}}
       </div>
     {% else %}
-      <p class="empty-note">The first piece will appear here when it's ready.</p>
+      <p class="empty-note">Nothing published yet. New essays will appear here.</p>
     {% endif %}
   </section>
 </main>
