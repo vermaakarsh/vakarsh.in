@@ -20,7 +20,7 @@ git -C themes/apollo checkout d7e0b55de74939bc6fb6ba4daea1c521ce53735d
 zola serve
 ```
 
-For a clean build, run `zola check --skip-external-links && zola build`. The `themes/apollo` checkout and generated `public/` are ignored; GitHub Actions fetches the same pinned theme for every build. Tags are generated from public page and post front matter; the About page's `personal` tag keeps the index navigable before the first post is published.
+For a clean build, run `zola check --skip-external-links && zola build`, then `ruby scripts/check_style_cache.rb`. Custom styles load through Apollo's `head_end` hook with a content-hashed URL, so existing visitors get new styling after a deployment rather than a cached previous version. The `themes/apollo` checkout and generated `public/` are ignored; GitHub Actions fetches the same pinned theme for every build. Tags are generated from public page and post front matter; the About page's `personal` tag keeps the index navigable before the first post is published.
 
 The home-page introduction and selected work entries live in `content/_index.md`; the fuller biography is in `content/about.md`. Apollo's article table of contents is enabled in `config.toml`. Its native sidebar appears on wide screens, while `templates/apollo/body_end.html` moves the same TOC into a collapsible in-article section on narrower screens.
 

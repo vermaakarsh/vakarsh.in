@@ -1,0 +1,4 @@
+{# Keep Apollo's header intact, but version our own styles by their contents. #}
+{% for stylesheet in config.extra.cachebusted_stylesheets %}
+<link rel="stylesheet" href="{{ get_url(path=stylesheet, cachebust=true) }}">
+{% endfor %}
