@@ -53,6 +53,8 @@ nav { margin-bottom: clamp(3rem, 7vw, 5rem); }
 .journey-year { color: var(--text-1); font-size: .85rem; font-variant-numeric: tabular-nums; padding-top: .12rem; }
 .journey-entry h3 { margin: 0; font-size: 1rem; font-weight: 600; }
 .journey-entry h3::before { content: none; }
+.journey-highlight > div:last-child { border-left: 2px solid var(--primary-color); padding-left: .85rem; }
+.about-page .body > ol > li.journey-highlight::before { background: var(--primary-color); }
 .about-page a:focus-visible { outline: 2px solid var(--text-0); outline-offset: 4px; }
 
 @media (max-width: 1365px) {
