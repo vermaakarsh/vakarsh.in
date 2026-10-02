@@ -14,9 +14,8 @@ intro = [
   "I like trying my hand at many things, building something to see how it works, and meeting people with a different way of looking at the world. Not every experiment becomes a project. Some just make a good story.",
 ]
 connect = "[LinkedIn](https://www.linkedin.com/in/akarshverma/) for the work side; [GitHub](https://github.com/vermaakarsh) for the code. Or just [stay and read](/posts/)."
-# To add a photo, place it in static/images/ and uncomment these lines:
-# portrait = "images/akarsh.jpg"
-# portrait_alt = "Akarsh Verma"
+portrait = "images/akarsh-avatar.svg"
+portrait_alt = "Illustrated portrait of Akarsh Verma"
 
 [[extra.journey]]
 year = "1989 - 2007"
