@@ -62,7 +62,7 @@ title = "Into healthcare"
 text = "Joined XCaliber Health. These days, my work is about healthcare products and AI."
 
 [[extra.journey]]
-year = "These days"
+year = "Now"
 title = "Still curious. Still building."
 text = "I share software and AI experiments through [CafeIO](https://www.youtube.com/@cafeio), explore Python and markets at [QuantLab](https://www.youtube.com/@quantlab), and build [Saarth](https://thequantlab.in/) for portfolio research. This blog holds the notes and questions along the way."
 +++
