@@ -24,6 +24,8 @@ For a clean build, run `zola check --skip-external-links && zola build`. The `th
 
 The home-page introduction and selected work entries live in `content/_index.md`; the fuller biography is in `content/about.md`. Apollo's article table of contents is enabled in `config.toml`. Its native sidebar appears on wide screens, while `templates/apollo/body_end.html` moves the same TOC into a collapsible in-article section on narrower screens.
 
+The short, personal About page uses `templates/about.html`, with its introduction in `[extra].intro` and its journey in Markdown. It intentionally omits article dates and a table of contents. To replace the portrait placeholder, add `static/images/akarsh.jpg` and uncomment `portrait` and `portrait_alt` in `content/about.md`. Personal ages and durations reflect October 2026; update them when revisiting the biography. Only user-approved family details and public professional/channel information belong here, not private drafts or employer material.
+
 ## Hosting
 
 GitHub Pages builds on `main` and deploys the `public/` artifact. Set the Pages source to **GitHub Actions** and the custom domain to `vakarsh.in`. At Namecheap, point the apex to GitHub Pages' four A records and `www` to `vermaakarsh.github.io`; leave mail-related DNS records untouched. After DNS and certificate provisioning, enable **Enforce HTTPS** in Pages settings.

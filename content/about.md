@@ -2,27 +2,40 @@
 title = "About"
 date = 2026-09-30
 updated = 2026-10-02
-description = "About Akarsh Verma and what he writes about."
+description = "A little about Akarsh: family, building things, CafeIO, QuantLab, and the journey so far."
 path = "about"
+template = "about.html"
 include_in_feeds = false
 [taxonomies]
 tags = ["personal"]
+[extra]
+intro = [
+  "I'm Akarsh. I live in Bengaluru, build software, and like figuring out how things work. That curiosity takes me between technology, AI, and markets—and sometimes onto YouTube.",
+  "I've been married for ten years, and I'm dad to a six-year-old daughter. Work and side projects are part of my life, not the whole of it.",
+]
+# To add a photo, place it in static/images/ and uncomment these lines:
+# portrait = "images/akarsh.jpg"
+# portrait_alt = "Akarsh Verma"
 +++
 
-I'm Akarsh Verma, an engineer and architect. I build software, study how it works in practice, and write down what I learn.
+## The journey so far
 
-## What I'm building
+1. **Building for a living**
 
-At [The Quant Lab](https://thequantlab.in/), I'm building Saarth, an investing research workspace. The aim is to help people understand what they own, explore what-if questions, and make decisions with more context. It is a research tool, not a source of predictions or investment recommendations.
+   My work has taken me through Ford, Home Credit, Thoucentric, and Kimberly-Clark—from software and architecture to data and AI. These days, I work on healthcare products at XCaliber Health. Different problems, but still plenty to learn.
 
-I also make [videos for The Quant Lab](https://youtube.com/@quantlab) and share code for [Financial Engineering Using Python](https://github.com/vermaakarsh/Financial-Engineering-Using-Python).
+2. **Sharing what I learn · CafeIO**
 
-## Background
+   [CafeIO](https://www.youtube.com/@cafeio) is where I talk about software architecture, cloud, machine learning, and AI. It's a place to work through ideas and explain the things I've been experimenting with.
 
-My work has included analytics consulting, AI and machine learning, and enterprise architecture. Earlier in my career, I worked at Ford. Those experiences made me interested in the gap between a model that works on paper and a system people can actually use.
+3. **Following another curiosity · QuantLab**
 
-## Why I write
+   [QuantLab](https://www.youtube.com/@quantlab) brings together my interests in programming and markets. I share Python tutorials, explore quantitative methods, and look at the tools behind trading and financial research.
 
-I use this site for technical notes and essays about software, AI, markets, and learning. Some pieces explain an implementation; others unpack a decision, an experiment, or a mistake. I publish when I have something worth sharing, not to meet a schedule.
+4. **Putting it into practice · Saarth**
 
-You can find my code on [GitHub](https://github.com/vermaakarsh). For new writing, use the [RSS feed](/atom.xml) or browse by [tag](/tags/).
+   I'm also building [Saarth at The Quant Lab](https://thequantlab.in/): a workspace for understanding portfolios and exploring what-if questions. Research and context, not predictions or investment recommendations.
+
+This blog is my own little corner for notes, questions, and things worth sharing along the way.
+
+[LinkedIn](https://www.linkedin.com/in/akarshverma/) for the work side; [GitHub](https://github.com/vermaakarsh) for the code. Or just [stay and read](/posts/).
