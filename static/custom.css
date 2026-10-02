@@ -47,7 +47,9 @@ nav { margin-bottom: clamp(3rem, 7vw, 5rem); }
 .about-page .body > ol p { margin: .45rem 0 0; }
 .about-page .body > ol p:first-child { margin: 0; }
 .about-page .body > ol strong { font-weight: 600; }
-.journey-entry { display: grid; grid-template-columns: 6.8rem minmax(0, 1fr); gap: 1.5rem; }
+.journey-entry { display: grid; grid-template-columns: 7rem minmax(0, 1fr); gap: 1.5rem; }
+.journey-date { display: flex; flex-direction: column; gap: .35rem; }
+.journey-duration { color: var(--text-1); font-size: .75rem; }
 .journey-year { color: var(--text-1); font-size: .85rem; font-variant-numeric: tabular-nums; padding-top: .12rem; }
 .journey-entry h3 { margin: 0; font-size: 1rem; font-weight: 600; }
 .journey-entry h3::before { content: none; }

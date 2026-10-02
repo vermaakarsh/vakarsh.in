@@ -1,7 +1,7 @@
 {% component journey(page: map) %}
 <ol class="life-timeline" aria-label="Akarsh's life so far">
 {% for step in page.extra.journey | reverse %}
-<li class="journey-entry"><span class="journey-year">{{ step.year }}</span><div><h3>{{ step.title }}</h3>{{ step.text | markdown | trim | safe }}</div></li>
+<li class="journey-entry"><div class="journey-date"><span class="journey-year">{{ step.year }}</span>{% if step.duration is defined %}<small class="journey-duration">{{ step.duration }}</small>{% endif %}</div><div><h3>{{ step.title }}</h3>{{ step.text | markdown | trim | safe }}</div></li>
 {% endfor %}
 </ol>
 {% endcomponent journey %}

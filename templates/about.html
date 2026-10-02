@@ -10,6 +10,7 @@
                     {% for paragraph in page.extra.intro %}
                         <p>{{ paragraph }}</p>
                     {% endfor %}
+                    <div class="about-connect">{{ page.extra.connect | markdown | safe }}</div>
                 </div>
                 <figure class="about-portrait">
                     {% if page.extra?.portrait %}

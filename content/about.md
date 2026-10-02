@@ -1,7 +1,7 @@
 +++
 title = "About"
 date = 2026-09-30
-updated = 2026-10-02
+updated = 2026-10-03
 description = "A little about Akarsh: family, building things, CafeIO, QuantLab, and the journey so far."
 path = "about"
 template = "about.html"
@@ -10,8 +10,10 @@ include_in_feeds = false
 tags = ["personal"]
 [extra]
 intro = [
-  "I'm Akarsh. Bengaluru is home. I'm a husband, a dad, and someone who likes building things and figuring out how they work. Here's the short version of how I got here.",
+  "I'm Akarsh. Bengaluru is home. Husband for ten years and counting. Father for six years and counting.",
+  "I like trying my hand at many things, building something to see how it works, and meeting people with a different way of looking at the world. Not every experiment becomes a project. Some just make a good story.",
 ]
+connect = "[LinkedIn](https://www.linkedin.com/in/akarshverma/) for the work side; [GitHub](https://github.com/vermaakarsh) for the code. Or just [stay and read](/posts/)."
 # To add a photo, place it in static/images/ and uncomment these lines:
 # portrait = "images/akarsh.jpg"
 # portrait_alt = "Akarsh Verma"
@@ -29,12 +31,19 @@ text = "Still no grand plan. But now I had a marksheet."
 [[extra.journey]]
 year = "2007"
 title = "Finished 12th standard"
-text = "Next stop: studying computer science. A little more direction, plenty left to figure out."
+text = "A little more direction. Still no reliable answer to: what do you want to be?"
 
 [[extra.journey]]
-year = "2011"
+year = "2007 - 2011"
+duration = "Four years"
+title = "Computer science, and figuring things out"
+text = "College. Learning to code, finishing a degree, and slowly discovering that building things was more interesting than having a grand plan. Graduated in 2011."
+
+[[extra.journey]]
+year = "2011 - 2018"
+duration = "Seven years"
 title = "Graduated. Started working."
-text = "Finished my computer science degree and joined Ford. Seven years of software, data, and eventually architecture followed."
+text = "Joined Ford. Seven years of software, data, and eventually architecture. A long stretch of learning what happens when the things you build have to work in the real world."
 
 [[extra.journey]]
 year = "2015"
@@ -49,12 +58,22 @@ text = "Moved to Home Credit, working on architecture in financial services. New
 [[extra.journey]]
 year = "2020"
 title = "Became a dad"
-text = "My daughter arrived. A whole new chapter—with no user manual. Around the same time, I joined Thoucentric, later moving to Thoucentric Labs to build AI platforms."
+text = "My daughter arrived. A whole new chapter, no user manual. Around the same time, I joined Thoucentric, later moving to Thoucentric Labs to build AI platforms."
+
+[[extra.journey]]
+year = "2020"
+title = "Started sharing on CafeIO"
+text = "The first public [CafeIO video](https://www.youtube.com/watch?v=sgZ6S85T3d4) went up in July: machine learning system design. Another way to learn by trying to explain things."
 
 [[extra.journey]]
 year = "2022"
 title = "Data and AI at a bigger scale"
 text = "Joined Kimberly-Clark, working on AI solutions and data platforms."
+
+[[extra.journey]]
+year = "2023"
+title = "QuantLab joins the story"
+text = "The first public [QuantLab video](https://www.youtube.com/watch?v=eZ92Q0s6COI) went up in May. Python, markets, and the questions that happen when those two meet."
 
 [[extra.journey]]
 year = "2024"
@@ -71,4 +90,8 @@ text = "I share software and AI experiments through [CafeIO](https://www.youtube
 
 {% <journey page={page}> %}{% </journey> %}
 
-[LinkedIn](https://www.linkedin.com/in/akarshverma/) for the work side; [GitHub](https://github.com/vermaakarsh) for the code. Or just [stay and read](/posts/).
+## Elsewhere
+
+[CafeIO on YouTube](https://www.youtube.com/@cafeio) for software and AI. [QuantLab on YouTube](https://www.youtube.com/@quantlab) for Python and markets. [The Quant Lab](https://thequantlab.in/) is where Saarth lives.
+
+More blog and project links will find a home here. I'll add them as they're ready.
