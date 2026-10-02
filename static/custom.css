@@ -47,6 +47,10 @@ nav { margin-bottom: clamp(3rem, 7vw, 5rem); }
 .about-page .body > ol p { margin: .45rem 0 0; }
 .about-page .body > ol p:first-child { margin: 0; }
 .about-page .body > ol strong { font-weight: 600; }
+.journey-entry { display: grid; grid-template-columns: 6.8rem minmax(0, 1fr); gap: 1.5rem; }
+.journey-year { color: var(--text-1); font-size: .85rem; font-variant-numeric: tabular-nums; padding-top: .12rem; }
+.journey-entry h3 { margin: 0; font-size: 1rem; font-weight: 600; }
+.journey-entry h3::before { content: none; }
 .about-page a:focus-visible { outline: 2px solid var(--text-0); outline-offset: 4px; }
 
 @media (max-width: 1365px) {
@@ -61,4 +65,5 @@ nav { margin-bottom: clamp(3rem, 7vw, 5rem); }
   .about-portrait { width: 100px; }
   .portrait-placeholder span { font-size: 1.6rem; }
   .about-page .body { margin-top: 2rem; }
+  .journey-entry { grid-template-columns: 1fr; gap: .3rem; }
 }

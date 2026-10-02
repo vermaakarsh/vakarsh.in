@@ -10,32 +10,65 @@ include_in_feeds = false
 tags = ["personal"]
 [extra]
 intro = [
-  "I'm Akarsh. I live in Bengaluru, build software, and like figuring out how things work. That curiosity takes me between technology, AI, and markets—and sometimes onto YouTube.",
-  "I've been married for ten years, and I'm dad to a six-year-old daughter. Work and side projects are part of my life, not the whole of it.",
+  "I'm Akarsh. Bengaluru is home. I'm a husband, a dad, and someone who likes building things and figuring out how they work. Here's the short version of how I got here.",
 ]
 # To add a photo, place it in static/images/ and uncomment these lines:
 # portrait = "images/akarsh.jpg"
 # portrait_alt = "Akarsh Verma"
+
+[[extra.journey]]
+year = "1989"
+title = "Hello, world"
+text = "Arrived. Too small to remember much, and definitely no idea what I was doing."
+
+[[extra.journey]]
+year = "2005"
+title = "Passed 10th standard"
+text = "Still no grand plan. But now I had a marksheet."
+
+[[extra.journey]]
+year = "2007"
+title = "Finished 12th standard"
+text = "Next stop: studying computer science. A little more direction, plenty left to figure out."
+
+[[extra.journey]]
+year = "2011"
+title = "Graduated. Started working."
+text = "Finished my computer science degree and joined Ford. Seven years of software, data, and eventually architecture followed."
+
+[[extra.journey]]
+year = "2015"
+title = "Got married"
+text = "Life acquired a co-author. Not everything important comes with a job title."
+
+[[extra.journey]]
+year = "2018"
+title = "A different kind of system"
+text = "Moved to Home Credit, working on architecture in financial services. New problems, more learning."
+
+[[extra.journey]]
+year = "2020"
+title = "Became a dad"
+text = "My daughter arrived. A whole new chapter—with no user manual. Around the same time, I joined Thoucentric, later moving to Thoucentric Labs to build AI platforms."
+
+[[extra.journey]]
+year = "2022"
+title = "Data and AI at a bigger scale"
+text = "Joined Kimberly-Clark, working on AI solutions and data platforms."
+
+[[extra.journey]]
+year = "2024"
+title = "Into healthcare"
+text = "Joined XCaliber Health. These days, my work is about healthcare products and AI."
+
+[[extra.journey]]
+year = "These days"
+title = "Still curious. Still building."
+text = "I share software and AI experiments through [CafeIO](https://www.youtube.com/@cafeio), explore Python and markets at [QuantLab](https://www.youtube.com/@quantlab), and build [Saarth](https://thequantlab.in/) for portfolio research. This blog holds the notes and questions along the way."
 +++
 
-## The journey so far
+## The story so far
 
-1. **Building for a living**
-
-   My work has taken me through Ford, Home Credit, Thoucentric, and Kimberly-Clark—from software and architecture to data and AI. These days, I work on healthcare products at XCaliber Health. Different problems, but still plenty to learn.
-
-2. **Sharing what I learn · CafeIO**
-
-   [CafeIO](https://www.youtube.com/@cafeio) is where I talk about software architecture, cloud, machine learning, and AI. It's a place to work through ideas and explain the things I've been experimenting with.
-
-3. **Following another curiosity · QuantLab**
-
-   [QuantLab](https://www.youtube.com/@quantlab) brings together my interests in programming and markets. I share Python tutorials, explore quantitative methods, and look at the tools behind trading and financial research.
-
-4. **Putting it into practice · Saarth**
-
-   I'm also building [Saarth at The Quant Lab](https://thequantlab.in/): a workspace for understanding portfolios and exploring what-if questions. Research and context, not predictions or investment recommendations.
-
-This blog is my own little corner for notes, questions, and things worth sharing along the way.
+{% <journey page={page}> %}{% </journey> %}
 
 [LinkedIn](https://www.linkedin.com/in/akarshverma/) for the work side; [GitHub](https://github.com/vermaakarsh) for the code. Or just [stay and read](/posts/).
