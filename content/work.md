@@ -1,5 +1,5 @@
 +++
-title = "Selected work"
+title = "Experiments"
 description = "A few things I've built, taught, and shared."
 path = "work"
 template = "work.html"

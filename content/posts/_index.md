@@ -1,5 +1,5 @@
 +++
-title = "Writing"
+title = "Opinions"
 sort_by = "date"
 paginate_by = 8
 insert_anchor_links = "heading"

@@ -1,5 +1,5 @@
 +++
-title = "About"
+title = "About me"
 date = 2026-09-30
 updated = 2026-10-03
 description = "A little about Akarsh: family, building things, CafeIO, QuantLab, and the journey so far."
