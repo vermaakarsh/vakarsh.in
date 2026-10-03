@@ -3,12 +3,12 @@
 {% block main_content %}
 <main class="home">
   <header class="home-about">
-    <h1>Writing</h1>
+    <h1>Opinions</h1>
     <div class="home-intro">{{ section.content | safe }}</div>
   </header>
 
   {% set writing = get_section(path="posts/_index.md") %}
-  <section class="home-writing" aria-label="Recent writing">
+  <section class="home-writing" aria-label="Recent opinions">
     {% if writing.pages | length > 0 %}
       <div class="post-list">
         {{<post.list_posts pages={writing.pages} />}}

@@ -2,3 +2,5 @@
 {% for stylesheet in config.extra.cachebusted_stylesheets %}
 <link rel="stylesheet" href="{{ get_url(path=stylesheet, cachebust=true) }}">
 {% endfor %}
+<link rel="icon" type="image/png" sizes="160x160" href="{{ get_url(path=config.extra.face_favicon, cachebust=true) }}">
+<link rel="apple-touch-icon" sizes="160x160" href="{{ get_url(path=config.extra.face_favicon, cachebust=true) }}">
