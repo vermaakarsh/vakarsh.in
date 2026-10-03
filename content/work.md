@@ -1,7 +1,8 @@
 +++
-title = "Experiments"
+title = "Projects"
 description = "A few things I've built, taught, and shared."
-path = "work"
+path = "projects"
+aliases = ["work"]
 template = "work.html"
 include_in_feeds = false
 

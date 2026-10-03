@@ -14,9 +14,15 @@
                 </div>
                 <figure class="about-portrait">
                     {% if page.extra?.portrait %}
+                        <picture>
+                            {% if page.extra?.portrait_static %}
+                                <source media="(prefers-reduced-motion: reduce)"
+                                        srcset="{{ get_url(path=page.extra.portrait_static, cachebust=true) }}">
+                            {% endif %}
                         <img src="{{ get_url(path=page.extra.portrait, cachebust=true) }}"
                              alt="{{ page.extra.portrait_alt | default(value='Akarsh Verma') }}"
                              width="180" height="180" decoding="async">
+                        </picture>
                     {% else %}
                         <div class="portrait-placeholder" role="img" aria-label="Placeholder for a photo of Akarsh Verma">
                             <span aria-hidden="true">AV</span>

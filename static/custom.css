@@ -5,7 +5,7 @@ nav { margin-bottom: clamp(3rem, 7vw, 5rem); }
 
 .home-intro { max-width: 65ch; font-size: 1rem; line-height: 1.75; }
 .home-intro p { margin: 0 0 1.2rem; }
-.home-intro p + p { color: var(--text-1); font-size: .92em; }
+.home-intro p + p { color: var(--text-0); }
 .home-about h1, .work-page h1 { margin-bottom: 1.4rem; }
 .work-page .work-list { margin-top: 2rem; }
 .work-list { list-style: none; margin: 0; padding: 0; }
@@ -14,7 +14,16 @@ nav { margin-bottom: clamp(3rem, 7vw, 5rem); }
 .work-item h3 { margin: 0 0 .35rem; font-size: 1.1rem; }
 .work-item h3::before { content: none; }
 .work-item p { color: var(--text-1); margin: 0; max-width: 60ch; }
-.home-writing { margin-top: 2.5rem; }
+.home-writing { margin-top: 3rem; }
+.home-writing h2 { margin: 0 0 1.5rem; font-size: 1.3rem; }
+.home-writing h2::before, .article-list h3::before { content: "# "; }
+.article-list { list-style: none; margin: 0; padding: 0; }
+.article-list li { display: grid; grid-template-columns: 7.5rem minmax(0, 1fr); gap: 1rem; align-items: baseline; margin: 0 0 1rem; }
+.article-list time { font-family: var(--mono-text-font); font-size: .9rem; font-variant-numeric: tabular-nums; }
+.article-list h3 { margin: 0; font-size: 1.1rem; font-weight: 400; overflow-wrap: anywhere; }
+.article-list h3 a { border-bottom: none; }
+.article-list h3 a:focus-visible, .home a:focus-visible { outline: 2px solid var(--text-0); outline-offset: 4px; }
+.all-posts { margin-top: 1.5rem; }
 .empty-note { color: var(--text-1); margin-top: 1.5rem; }
 .tag-index ul { list-style: none; margin: 2.5rem 0 0; padding: 0; }
 .tag-index li { display: flex; justify-content: space-between; gap: 1rem; padding: .85rem 0; border-bottom: 1px solid var(--border-color); }
@@ -61,6 +70,9 @@ nav { margin-bottom: clamp(3rem, 7vw, 5rem); }
 
 @media (max-width: 600px) {
   nav { gap: 1rem; }
+  .right-nav { display: flex; flex-wrap: wrap; align-items: center; gap: .45rem; font-size: .9rem; }
+  .right-nav > a { margin-right: 0 !important; white-space: nowrap; }
+  .article-list li { grid-template-columns: 1fr; gap: .25rem; margin-bottom: 1.5rem; }
   .work-item { grid-template-columns: 1fr; gap: .35rem; }
   .about-intro { grid-template-columns: 1fr; gap: .6rem; }
   .about-portrait { width: 100px; }
