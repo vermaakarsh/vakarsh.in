@@ -1,0 +1,16 @@
+{% component articles.row(article: map) %}
+  <li>
+    <time datetime="{{ article.date | date(format='%Y-%m-%d') }}">{{ article.date | date(format='%Y-%m-%d') }}</time>
+    <h3><a href="{{ article.extra?.link_to or article.permalink }}">{{ article.title }}{% if article.extra?.link_to %} ↗{% endif %}</a></h3>
+  </li>
+{% endcomponent articles.row %}
+
+{% component articles.list(pages: array) %}
+<ul class="article-list">
+  {% for article in pages %}
+    {% if loop.index <= 5 %}
+      {{<articles.row article={article} />}}
+    {% endif %}
+  {% endfor %}
+</ul>
+{% endcomponent articles.list %}

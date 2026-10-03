@@ -3,7 +3,7 @@ require "digest"
 asset = File.binread("static/images/akarsh-favicon.png")
 abort "Favicon must be the supplied 160px PNG" unless asset.start_with?("\x89PNG\r\n\x1a\n".b) && asset.byteslice(16, 8).unpack("NN") == [160, 160]
 digest = Digest::SHA256.hexdigest(asset)[0, 20]
-expected = ["Opinions", "Tags", "Experiments", "About me"]
+expected = ["/posts", "/projects", "/talks", "/tags", "/about me"]
 checked = 0
 Dir.glob("public/**/*.html").each do |path|
   html = File.read(path)
@@ -21,10 +21,10 @@ Dir.glob("public/**/*.html").each do |path|
 end
 abort "No themed pages checked" if checked.zero?
 abort "LinkedIn icon missing" unless File.file?("public/icons/social/linkedin.svg")
-{"public/index.html" => "Opinions", "public/work/index.html" => "Experiments", "public/about/index.html" => "About me"}.each do |path, title|
+{"public/index.html" => "Hey there 👋🏼", "public/projects/index.html" => "Projects", "public/talks/index.html" => "Talks", "public/about/index.html" => "About me"}.each do |path, title|
   html = File.read(path)
   abort "Wrong heading in #{path}" unless html.match?(/<h1\b[^>]*>\s*#{Regexp.escape(title)}\s*<\/h1>/)
 end
 archive = File.read("public/posts/index.html")
-abort "Opinions archive title missing" unless archive.match?(/<div\b[^>]*class=(?:"page-header"|page-header)[^>]*>\s*Opinions\s*<\/div>/)
+abort "Posts archive title missing" unless archive.match?(/<div\b[^>]*class=(?:"page-header"|page-header)[^>]*>\s*Posts\s*<\/div>/)
 puts "PASS: #{checked} themed pages have ordered navigation, LinkedIn and a versioned face favicon; page headings match"

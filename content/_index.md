@@ -3,4 +3,6 @@ template = "home.html"
 
 +++
 
-I'm Akarsh. I build software, explore AI and markets, and write about what I learn. [A little more about me](/about/).
+I'm Akarsh, a software builder from India 🇮🇳, exploring AI and markets.
+
+I like trying things, meeting people, and [sharing what I learn](/posts/).

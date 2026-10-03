@@ -3,16 +3,41 @@
 {% block main_content %}
 <main class="home">
   <header class="home-about">
-    <h1>Opinions</h1>
+    <h1>Hey there 👋🏼</h1>
     <div class="home-intro">{{ section.content | safe }}</div>
   </header>
 
   {% set writing = get_section(path="posts/_index.md") %}
-  <section class="home-writing" aria-label="Recent opinions">
+  {% set_global has_highlights = false %}
+  {% for path in config.extra.highlighted_posts %}
+    {% for article in writing.pages %}
+      {% if article.relative_path == path %}
+        {% set_global has_highlights = true %}
+      {% endif %}
+    {% endfor %}
+  {% endfor %}
+  <section class="home-writing" aria-labelledby="highlighted-articles">
+    <h2 id="highlighted-articles">Highlighted articles</h2>
+    {% if has_highlights %}
+      <ul class="article-list">
+        {% for path in config.extra.highlighted_posts %}
+          {% for article in writing.pages %}
+            {% if article.relative_path == path %}
+              {{<articles.row article={article} />}}
+            {% endif %}
+          {% endfor %}
+        {% endfor %}
+      </ul>
+    {% else %}
+      <p class="empty-note">No highlighted articles yet.</p>
+    {% endif %}
+  </section>
+
+  <section class="home-writing" aria-labelledby="recent-articles">
+    <h2 id="recent-articles">Recent articles</h2>
     {% if writing.pages | length > 0 %}
-      <div class="post-list">
-        {{<post.list_posts pages={writing.pages} />}}
-      </div>
+      {{<articles.list pages={writing.pages} />}}
+      <p class="all-posts"><a href="{{ get_url(path='/posts/') }}">All posts</a></p>
     {% else %}
       <p class="empty-note">Nothing published yet. New essays will appear here.</p>
     {% endif %}

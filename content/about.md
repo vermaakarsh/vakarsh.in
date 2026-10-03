@@ -10,6 +10,7 @@ include_in_feeds = false
 tags = ["personal"]
 [extra]
 intro = [
+  "Hey there 👋🏼",
   "I'm Akarsh. Bengaluru is home. Husband for ten years and counting. Father for six years and counting.",
   "I like trying my hand at many things, building something to see how it works, and meeting people with a different way of looking at the world. Not every experiment becomes a project. Some just make a good story.",
 ]
