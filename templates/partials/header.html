@@ -134,7 +134,11 @@
 
     {# Table of contents #}
     {% if config.extra.toc | default(value=false) %}
-        <script defer src="{% if page and page.relative_path == \"posts/when-execution-becomes-cheap.md\" %}{{ get_url(path=\"js/reading-toc.js\", cachebust=true) }}{% else %}{{ get_url(path=\"js/toc.js\") }}{% endif %}"></script>
+        {% if page and page.relative_path == "posts/when-execution-becomes-cheap.md" %}
+            <script defer src="{{ get_url(path='js/reading-toc.js', cachebust=true) }}"></script>
+        {% else %}
+            <script defer src={{ get_url(path="js/toc.js") }}></script>
+        {% endif %}
     {% endif %}
 
     {# Dynamic Note #}
