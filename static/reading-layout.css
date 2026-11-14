@@ -1,4 +1,4 @@
-main article > .body {
+main article {
   max-inline-size: 70ch;
   margin-inline: auto;
 }
@@ -32,3 +32,58 @@ main article > .body > h2 {
   background: var(--primary-color);
   border-radius: 2px;
 }
+
+:root.dark .note-container {
+  border: 1px solid var(--border-color);
+  border-radius: .5rem;
+}
+
+:root.dark .note-header,
+:root.dark .note-toggle {
+  padding: .8rem 1rem;
+  background: var(--bg-1);
+  font-size: 1rem;
+}
+
+:root.dark .note-toggle {
+  padding-inline-end: 2.75rem;
+}
+
+:root.dark .note-toggle:hover {
+  background: var(--bg-2);
+}
+
+:root.dark .note-toggle:focus-visible {
+  outline: 2px solid var(--primary-color);
+  outline-offset: -3px;
+}
+
+:root.dark .note-toggle::before {
+  content: "";
+  inline-size: .45rem;
+  block-size: .45rem;
+  border-inline-end: 2px solid currentColor;
+  border-block-end: 2px solid currentColor;
+  transform: translateY(-70%) rotate(45deg);
+}
+
+:root.dark .note-toggle[aria-expanded="true"]::before {
+  transform: translateY(-30%) rotate(225deg);
+}
+
+:root.dark .note-icon {
+  padding-inline-start: 0;
+}
+
+:root.dark .note-icon::before {
+  content: none;
+}
+
+:root.dark .note-content {
+  padding: .85rem 1rem;
+  border-block-start: 1px solid var(--border-color);
+  background: var(--bg-0);
+}
+
+:root.dark .note-content > :first-child { margin-block-start: 0; }
+:root.dark .note-content > :last-child { margin-block-end: 0; }
