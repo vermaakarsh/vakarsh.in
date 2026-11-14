@@ -24,6 +24,9 @@ jobs:
           repository: not-matthias/apollo
           ref: d7e0b55de74939bc6fb6ba4daea1c521ce53735d
           path: themes/apollo
+      # Zola copies Apollo's static files over matching project files.
+      - name: Use the blog's section highlighting script
+        run: rm themes/apollo/static/js/toc.js
       - name: Build Zola site
         uses: getzola/github-pages@066755243e69f508fd1a74739fbf1a65f656c790
         with:
