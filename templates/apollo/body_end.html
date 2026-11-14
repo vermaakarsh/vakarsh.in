@@ -2,9 +2,9 @@
   (() => {
     const toc = document.querySelector(".right-content .toc");
     const article = document.querySelector("main article");
-    if (!toc || !article) return;
+    const sidebar = document.querySelector(".left-content");
+    if (!toc || !article || !sidebar) return;
 
-    const sidebar = toc.parentElement;
     const details = document.createElement("details");
     details.className = "mobile-toc";
     const summary = document.createElement("summary");
@@ -12,6 +12,7 @@
     details.append(summary);
     article.insertBefore(details, article.querySelector(".body"));
 
+    sidebar.classList.add("article-sidebar");
     const narrow = window.matchMedia("(max-width: 1365px)");
     const placeToc = () => {
       (narrow.matches ? details : sidebar).append(toc);
