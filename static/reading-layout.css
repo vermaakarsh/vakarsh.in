@@ -18,23 +18,5 @@ main article > .body > h2 {
 }
 
 .toc a[aria-current="location"] {
-  position: relative;
-  font-weight: 600;
-}
-
-.toc > ul > li > a[aria-current="location"]::before {
-  content: "";
-  position: absolute;
-  inset-inline-start: calc(-1 * var(--toc-inset) - 2px);
-  inset-block-start: .15em;
-  block-size: 1em;
-  inline-size: 3px;
-  background: var(--primary-color);
-  border-radius: 2px;
-}
-
-.toc li li > a[aria-current="location"] {
-  text-decoration: underline;
-  text-decoration-color: var(--primary-color);
-  text-underline-offset: .2em;
+  color: var(--text-0);
 }
