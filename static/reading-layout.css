@@ -1,0 +1,40 @@
+main article > .body {
+  max-inline-size: 70ch;
+  margin-inline: auto;
+}
+
+main article > .body > h2 {
+  margin-block-start: 2.75rem;
+}
+
+.toc > ul {
+  --toc-inset: .875rem;
+  border-inline-start: 1px solid var(--border-color);
+  padding-inline-start: var(--toc-inset);
+}
+
+.toc > ul > li + li {
+  margin-block-start: .35rem;
+}
+
+.toc a[aria-current="location"] {
+  position: relative;
+  font-weight: 600;
+}
+
+.toc > ul > li > a[aria-current="location"]::before {
+  content: "";
+  position: absolute;
+  inset-inline-start: calc(-1 * var(--toc-inset) - 2px);
+  inset-block-start: .15em;
+  block-size: 1em;
+  inline-size: 3px;
+  background: var(--primary-color);
+  border-radius: 2px;
+}
+
+.toc li li > a[aria-current="location"] {
+  text-decoration: underline;
+  text-decoration-color: var(--primary-color);
+  text-underline-offset: .2em;
+}

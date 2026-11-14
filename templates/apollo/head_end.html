@@ -4,3 +4,6 @@
 {% endfor %}
 <link rel="icon" type="image/png" sizes="160x160" href="{{ get_url(path=config.extra.face_favicon, cachebust=true) }}">
 <link rel="apple-touch-icon" sizes="160x160" href="{{ get_url(path=config.extra.face_favicon, cachebust=true) }}">
+{% if page and page.relative_path == "posts/when-execution-becomes-cheap.md" %}
+<link rel="stylesheet" href="{{ get_url(path='reading-layout.css', cachebust=true) }}">
+{% endif %}
