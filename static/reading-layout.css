@@ -87,3 +87,34 @@ main article > .body > h2 {
 
 :root.dark .note-content > :first-child { margin-block-start: 0; }
 :root.dark .note-content > :last-child { margin-block-end: 0; }
+
+.article-slides {
+  margin-block: 1.5rem;
+  padding: .75rem 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: .5rem;
+  background: var(--bg-1);
+}
+
+.article-slides > summary {
+  padding: 0;
+  cursor: pointer;
+}
+
+.article-slides > summary:hover {
+  background: transparent;
+  color: var(--text-0);
+}
+
+.article-slides > summary:focus-visible {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 3px;
+}
+
+.article-slides > iframe {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  border: 0;
+  background: #121212;
+}

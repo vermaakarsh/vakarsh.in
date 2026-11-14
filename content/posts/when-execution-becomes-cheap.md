@@ -12,6 +12,8 @@ I gave a short talk recently on one idea: AI is making execution cheap. Coding, 
 
 This is roughly what I said, minus the slides, and a little more honest than I was on stage.
 
+{{ execution_slides() }}
+
 ## A mistake I learned early on
 
 Early in my career I believed I was becoming a domain expert. I wasn't.
