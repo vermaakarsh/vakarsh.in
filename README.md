@@ -4,6 +4,8 @@ A personal blog built with [Zola](https://www.getzola.org/) and the [Apollo them
 
 ## Publishing boundary
 
+![How a piece goes from Owl to vakarsh.in](docs/publishing-flow.svg)
+
 `Owl` is the private writing source. This public repository is **only the published site**. It does not clone Owl or receive automatic access to it. Drafts, notes, and the Hashnode archive are not imported by the site build.
 
 To publish a piece, finish it on a private Owl writing branch and set `status: published`, include `AV` in `outlets`, and add `publish_on_site: true` to its YAML front matter. It also needs a title, publication date, description, and at least one tag. Merging that change to Owl's `publish` branch runs its publishing workflow: it exports only the opted-in Markdown body and public metadata, then opens or updates a pull request here. Review that public PR and merge it to publish. A merge to this repository's `main` deploys automatically. Owl's `main` and unmerged writing branches do not export posts.
