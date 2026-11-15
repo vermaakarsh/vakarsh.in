@@ -58,7 +58,7 @@ As of last week, throwing a 60-page chart at an LLM for every patient, every tim
 
 A child comes to the emergency department with an asthma exacerbation. From the outside, the follow-up is one appointment. Under the hood, it's sixteen steps, and the follow-up protocol alone needs about 400 days of the child's chart.
 
-{% <note clickable={true} hidden={true} header="See all sixteen steps"> %}
+{% <note clickable={true} header="See all sixteen steps"> %}
 
 1. ED discharge note arrives
 2. Note parsed
@@ -87,7 +87,18 @@ Neither are fifty conditions wired together in LangChain. That's a flowchart wit
 
 An agent owns one job. It knows its goal, its tools, its limits, and when to hand over to a person. The limits matter most. On a medication renewal, the agent pulls the history, checks the protocol and drafts the renewal. The clinician signs. The agent never sends a prescription or changes a dose. Not because we asked nicely in a prompt. It just doesn't have that permission.
 
-Autonomy is earned, one step at a time. First the agent prepares and the clinician does. Then the agent completes and the clinician signs. Only with a track record does the clinician move to auditing.
+Autonomy is earned, one step at a time.
+
+{% <mermaid> %}
+flowchart TB
+    accTitle: How an agent earns autonomy
+    accDescr: The agent first prepares while the clinician acts. Next, the agent completes the task and the clinician signs. Once the agent has a track record, the clinician audits.
+    A["Agent prepares · Clinician acts"]
+    B["Agent completes · Clinician signs"]
+    C["Clinician audits"]
+    A --> B
+    B -->|With a track record| C
+{% </mermaid> %}
 
 ## Fewer people, deeper work
 

@@ -135,3 +135,34 @@ main article > .body > h2 {
   color: var(--text-1);
   font-variant-numeric: tabular-nums;
 }
+
+.body .mermaid[data-processed="true"] {
+  margin-block: 1rem 1.5rem;
+  padding: 1rem;
+  text-align: center;
+  background: var(--bg-0);
+  border: 1px solid var(--border-color);
+  border-radius: .5rem;
+}
+
+.body .mermaid .node rect {
+  fill: var(--bg-1) !important;
+  stroke: var(--border-color) !important;
+}
+
+.body .mermaid .nodeLabel,
+.body .mermaid .edgeLabel {
+  color: var(--text-0) !important;
+}
+
+.body .mermaid .edgeLabel p {
+  background: var(--bg-0) !important;
+}
+
+.body .mermaid .flowchart-link {
+  stroke: var(--text-2) !important;
+}
+
+.body .mermaid marker path {
+  fill: var(--text-2) !important;
+}
