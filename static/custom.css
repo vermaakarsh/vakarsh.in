@@ -105,3 +105,16 @@ nav { margin-bottom: clamp(3rem, 7vw, 5rem); }
   .about-page .body { margin-top: 2rem; }
   .journey-entry { grid-template-columns: 1fr; gap: .3rem; }
 }
+
+:root.light .toc {
+  --text-2: var(--text-1);
+}
+
+:root.dark {
+  --bg-0: #19191b;
+  --bg-1: #222225;
+  --bg-2: #313135;
+  --text-0: #f3f1ef;
+  --text-1: #c2bdb9;
+  --text-2: #a6a09c;
+}

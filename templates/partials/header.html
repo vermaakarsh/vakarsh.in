@@ -250,7 +250,7 @@
                 var themeToggleMode = "{{ theme }}";
             </script>
         {% endif %}
-        <script src={{ get_url(path="js/themetoggle.js") }}></script>
+        <script src="{{ get_url(path='js/blog-theme.js', cachebust=true) }}"></script>
 
         {% if theme == "auto" %}
             <script>
