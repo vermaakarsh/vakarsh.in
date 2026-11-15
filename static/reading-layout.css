@@ -118,3 +118,20 @@ main article > .body > h2 {
   border: 0;
   background: #121212;
 }
+
+.note-toggle + .note-content > ol {
+  padding-inline-start: 2.25rem;
+}
+
+.note-toggle + .note-content > ol > li {
+  padding-inline-start: .375rem;
+}
+
+.note-toggle + .note-content > ol > li + li {
+  margin-block-start: .4rem;
+}
+
+.note-toggle + .note-content > ol > li::marker {
+  color: var(--text-1);
+  font-variant-numeric: tabular-nums;
+}

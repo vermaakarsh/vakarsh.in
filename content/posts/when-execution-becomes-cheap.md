@@ -59,7 +59,24 @@ As of last week, throwing a 60-page chart at an LLM for every patient, every tim
 A child comes to the emergency department with an asthma exacerbation. From the outside, the follow-up is one appointment. Under the hood, it's sixteen steps, and the follow-up protocol alone needs about 400 days of the child's chart.
 
 {% <note clickable={true} hidden={true} header="See all sixteen steps"> %}
-The discharge note lands in the EHR. It gets parsed, the patient is matched, the encounter is classified, and a follow-up protocol is picked. About 400 days of the chart are pulled and summarised. A risk level and a follow-up window are set, and care gaps are checked. A slot is found, the parent is contacted, and the appointment is booked back into the EHR. A brief is drafted for the clinician, who reviews and signs. Reminders and no-shows are handled, and the outcome is tracked.
+
+1. ED discharge note arrives
+2. Note parsed
+3. Patient matched
+4. Encounter classified
+5. Follow-up protocol selected
+6. About 400 days of chart history pulled
+7. History summarised
+8. Risk level and follow-up window set
+9. Care gaps checked
+10. Appointment slot found
+11. Parent contacted
+12. Appointment booked in the EHR
+13. Clinician brief drafted
+14. Clinician reviews and signs
+15. Reminders and no-shows handled
+16. Outcome tracked
+
 {% </note> %}
 
 The model does four of those sixteen steps. Everything else is deterministic software that has to be right for every patient, every time. We've spent about two and a half years building this ourselves: our own agentic framework, our own fine-tuned models, our own protocol engines.
